@@ -29,25 +29,23 @@ Nhưng khi mình upload thì file của mình trở thành file text thay vì fi
 ![image](https://user-images.githubusercontent.com/81396319/168020272-be56fc48-c911-4c81-bbf4-8b3fad640576.png)
 Điều này có thể do file htacces của server do đó mình sẽ thử 1 cách khác là upload file htaccess để thay đổi cấu hình file htacces webserver
 ![image](https://user-images.githubusercontent.com/81396319/168020533-dacff544-cd96-4cfd-8a0f-929df8ded48e.png)
-
 ![image](https://user-images.githubusercontent.com/81396319/168020671-e49e6e76-1c4a-4834-b5cd-ac40515bb564.png)
 File đó sẽ thực thi file shell.jpg như một file php bình thường
 ![image](https://user-images.githubusercontent.com/81396319/168021289-78c5e261-b079-4537-9ffa-6aa3b14d21e4.png)
-
 ![image](https://user-images.githubusercontent.com/81396319/168021341-92918eeb-b09a-417c-9a04-9a55b4fecff6.png)
 
 Level 5
-Đoạn code dưới đây sẽ kiểm tra content-type xem có phải là image/jpeg , image/png , image/gif nếu không phải thì sẽ bị detect
-![image](https://user-images.githubusercontent.com/81396319/168021930-88e2afe2-7dbb-4920-aef4-6660349f4180.png)
-Để bypass kỹ thuật này ta sẽ sử dụng burpsuite và sửa lại phần content-type của file php thành một trong 3 cái trên là sẽ bypass thành công
-Request lúc chưa chỉnh sửa
-![image](https://user-images.githubusercontent.com/81396319/168022535-bfc638d3-ee71-40da-b757-51d0547797aa.png)
-Sau khi đã chỉnh sửa
-![image](https://user-images.githubusercontent.com/81396319/168022965-708774b7-5dd4-4325-ace8-b9a4053080af.png)
-Ta thành công upload và thực thi shell
-![image](https://user-images.githubusercontent.com/81396319/168023085-bbc805fd-c338-41f6-a36b-aec98ad8659c.png)
+Đoạn code này sẽ kiểm tra phần content-type của file nếu không phải là image/jpeg , image/png , image/gif sẽ bị detect
+![image](https://user-images.githubusercontent.com/81396319/168023691-99cc8131-5fe2-4bc9-9634-546f525a4172.png)
+Để bypass ta chỉ cần sử dụng công cụ burp-suite và sửa phần content-type thành một trong 3 cái trên là bypass được
+Request lúc chưa sửa
+![image](https://user-images.githubusercontent.com/81396319/168024075-6a82e321-af85-4a81-853e-82f20679f31e.png)
+Request sau khi sửa
+![image](https://user-images.githubusercontent.com/81396319/168024155-671699b3-c2bf-47c1-8bdc-a87a420d15f8.png)
+Ta thành công upload file và thực thi shell
+![image](https://user-images.githubusercontent.com/81396319/168024337-60d265f4-bb94-4864-bc00-49de597ed944.png)
 
-![image](https://user-images.githubusercontent.com/81396319/168023229-ba02267d-99d2-42c8-a12e-0254deb08750.png)
+![image](https://user-images.githubusercontent.com/81396319/168024461-5dcd0745-3bc6-4ca8-8fe2-324ff76f3105.png)
 
 
 
